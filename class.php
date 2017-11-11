@@ -86,4 +86,5 @@ echo Person::$strAddress."\n";
 $onePerson->eat();
 $onePerson->say();
 $onePerson = null;//释放一个对象 比unset 要好
-echo "============================================\n";
+
+echo "==================================================\n";
