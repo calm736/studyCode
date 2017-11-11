@@ -48,7 +48,7 @@ class Person{
         }
         //php 预定义方法不需要用户自己调用 在特殊情况下自动调用 魔术方法
         //__set 完成对私成员的赋值操作 不用用户自己调用
-        private function __set($name,$val){
+        public function __set($name,$val){
                 if($name === 'strPhoneNumber'){
                         $this->strPhoneNumber=strval($val);
                 }else if($name === 'intSex'){
@@ -56,7 +56,7 @@ class Person{
                         $this->$name = intval($val);
                 }
         }
-        private function __get($name){
+        public function __get($name){
                 if(isset($this->$name)){
                         return $this->$name;
                 }
@@ -65,7 +65,7 @@ class Person{
 
 
 };
-Person::run();
+/*Person::run();
 //实例化对象
 // $对象名 = new 类名称[参数列表]
 $onePerson = new Person();
@@ -85,6 +85,5 @@ echo Person::$strAddress."\n";
 
 $onePerson->eat();
 $onePerson->say();
-$onePerson = null;//释放一个对象 比unset 要好
-
-echo "==================================================\n";
+$onePerson = null;//释放一个对象 比unset 要好*/
+//echo "============================================\n";
