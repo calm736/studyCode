@@ -7,3 +7,4 @@ echo "Connection to server sucessfully";
 echo "Server is running: " . $redis->ping()."\n";
 
 echo $redis->get('llk')."\n";
+echo "redis test over";
