@@ -9,4 +9,7 @@
 */
 $arrOut = preg_split("/[!.]/","123!456.php");//字符组中对特殊字符不需要转义,字符仅仅代表自己本身 ^在字符组中表示非的意思
 $arrOut1 = preg_split("(!|\.)","123!456.php");//括号里的表达式视为一个整体
+preg_replace('/<.*?>/','',"<dsad>4353<3123>");//过滤字符串
+preg_match($pattern,$url,$res);//截取字符串
+var_dump($res);
 var_dump($arrOut1);
