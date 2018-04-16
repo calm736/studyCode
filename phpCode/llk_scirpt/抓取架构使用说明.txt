@@ -1,0 +1,15 @@
+/**
+ * 抓取平台使用说明:(新增站点时可参考baijiahao代码,若有疑问联系 lilinke@baidu.com)
+ * 新增站点:
+ *  1.在grab_site中增加新站点的基本信息与配置(可参考site_id=79)
+ *  2.添加ContentPage.php , SiteTab.php , get...php 三个文件(可直接从baijiahao拷贝，注意修改文件名)
+ *    抓取脚本 get...php
+ *      1）根据自己需求编写命令行参(site_id,site_tabid必填)
+ *    ContentPage.php
+ *      1)_getContentImgDataBySubSite方法必须重写 (抓取详情页信息)
+ *      2)getHttpHeader方法必须重写 获取满足本站点http头(根据站点需求处理)
+ *    SiteTab.php
+ *      1)initClassMember 方法 根据站点需求 初始化类成员
+ *      2)isNeedTurnBack ,getNextPageNo ,getSiteListUrl这三个方法在基类都有实现，若不满足需求子类重写
+ *      3） _getSubSiteList 必须实现(获取列表页信息)
+ */
